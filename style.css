@@ -1,0 +1,481 @@
+/* ==========================
+   Trust Medical Centre
+   style.css
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f9fc;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navigation */
+
+header{
+    background:#0b6e99;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+.active{
+    color:#7fffd4;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/hero.jpg") center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text{
+    animation:fadeIn 2s;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+.btn,
+.btn2{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#0b6e99;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.btn:hover,
+.btn2:hover{
+    background:#14b8a6;
+    transform:translateY(-5px);
+}
+
+/* Banner */
+
+.page-banner{
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("images/banner.jpg") center/cover;
+
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.page-banner h1{
+    font-size:45px;
+}
+
+/* General Sections */
+
+section{
+    padding:70px 10%;
+}
+
+.container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.container img{
+    width:450px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.container h2{
+    color:#0b6e99;
+    margin-bottom:15px;
+}
+
+/* Cards */
+
+.cards,
+.services-grid,
+.doctor-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+}
+
+.card,
+.service-card,
+.doctor{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+    padding-bottom:20px;
+
+}
+
+.card:hover,
+.service-card:hover,
+.doctor:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img,
+.doctor img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card i{
+
+    color:#0b6e99;
+
+    font-size:45px;
+
+    margin:20px;
+
+}
+
+.card h3,
+.service-card h3,
+.doctor h3{
+
+    color:#0b6e99;
+
+    margin-bottom:10px;
+
+}
+
+.service-card{
+
+    padding:30px;
+
+}
+
+/* Statistics */
+
+.statistics{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    text-align:center;
+
+    background:#0b6e99;
+
+    color:white;
+
+}
+
+.stat h2{
+
+    font-size:45px;
+
+}
+
+/* Testimonial */
+
+.testimonial{
+
+    background:white;
+
+    text-align:center;
+
+}
+
+.testimonial p{
+
+    font-style:italic;
+
+    font-size:20px;
+
+    max-width:700px;
+
+    margin:20px auto;
+
+}
+
+/* Emergency */
+
+.emergency{
+
+    text-align:center;
+
+    background:#14b8a6;
+
+    color:white;
+
+}
+
+/* Contact */
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:40px;
+
+}
+
+.contact-info{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+}
+
+form{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+button{
+
+    background:#0b6e99;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    width:100%;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#14b8a6;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#05263a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    margin-top:40px;
+
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-content a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+.footer-content a:hover{
+
+    color:#7fffd4;
+
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+nav ul li{
+
+    margin:10px 0;
+
+}
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+.container{
+
+    flex-direction:column;
+
+}
+
+.container img{
+
+    width:100%;
+
+}
+
+.page-banner h1{
+
+    font-size:32px;
+
+}
+
+}
